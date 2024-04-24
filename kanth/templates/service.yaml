@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment-npp
+  name: my-deployment-npr
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-app-npp
+      app: my-app-npr
   template:
     metadata:
       labels:
-        app: my-app-npp
+        app: my-app-npr
     spec:
       containers:
-      - name: my-container2
+      - name: my-containerr
         image: sreekanth143/java-web-app-docker:app1
         ports:
         - containerPort: 9000
@@ -21,9 +21,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app-npp
+  name: my-app-npr
   labels:
-    app: my-app-npp
+    app: my-app-npr
 spec:
   type: NodePort
   ports:
@@ -31,5 +31,5 @@ spec:
     targetPort: 9000
     protocol: TCP
   selector:
-    app: my-app-npp
+    app: my-app-npr
 
