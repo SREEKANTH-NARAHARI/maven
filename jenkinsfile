@@ -1,0 +1,13 @@
+pipeline{
+  ageny any
+  tools{
+    maven 'mvn'
+  }
+  stages{
+      stage('clone'){
+         steps{
+            echo 'pipeline'
+         }
+      }
+  }
+}
