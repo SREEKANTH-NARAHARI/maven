@@ -1,7 +1,8 @@
 pipeline{
   ageny any
   tools{
-    maven 'mvn'
+   git 'git'   
+   maven 'mvn'
   }
   stages{
       stage('clone'){
